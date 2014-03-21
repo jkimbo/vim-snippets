@@ -403,3 +403,6 @@ snippet aw
 	array_walk($${1:foo}, function(&$${2:v}, $${3:k}) {
 		$$2 = ${4};
 	});
+# psysh debugger
+snippet psy
+	\Psy\Shell::debug(get_defined_vars());
