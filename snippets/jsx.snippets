@@ -44,20 +44,14 @@ snippet gis
     },
 snippet ism
     isMounted()
-snippet jsx
-    /**
-     * @jsx React.DOM
-     */
 snippet pt
     propTypes: {
         ${1}: React.PropTypes.${2:string}
     },
 snippet rcc
-    /**
-     * @jsx React.DOM
-     */
+    "use strict";
 
-    var React = require('React');
+    var React = require('react/addons');
 
     var ${1:ClassName} = React.createClass({
 
