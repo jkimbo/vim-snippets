@@ -49,21 +49,17 @@ snippet pt
         ${1}: React.PropTypes.${2:string}
     },
 snippet rcc
-    "use strict";
+    import React from 'react/addons';
 
-    var React = require('react/addons');
-
-    var ${1:ClassName} = React.createClass({
-
-        render: function() {
-            return (
-                ${0:<div />}
-            );
-        }
-
+    let ${1:ClassName} = React.createClass({
+      render() {
+        return (
+          ${0:<div />}
+        );
+      }
     });
 
-    module.exports = $1;
+    export default $1;
 snippet ren
     render: function() {
         return (
