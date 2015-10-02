@@ -1,5 +1,35 @@
-snippet cs
-    var cx = React.addons.classSet;
+snippet icx
+    import cx from 'classnames';
+snippet iimpt
+    import ImmutablePropTypes from 'react-immutable-proptypes';
+snippet ipt
+    import React, { PropTypes } from 'react';
+snippet rcc
+    import React from 'react';
+
+    export default class ${1:ClassName} extends React.Component {
+      render() {
+        return (
+          ${0:<div />}
+        );
+      }
+    }
+snippet con
+    constructor(props) {
+        super(props);
+    }
+
+snippet pt
+    ${1:ClassName}.propTypes = {
+      ${2}: PropTypes.${3:string},
+    };
+snippet dp
+    ${1:ClassName}.defaultProps = {
+      ${2}: ${3},
+    };
+snippet bf
+    this.${1:FunctionName} = this.$1.bind(this);
+
 snippet cdm
     componentDidMount: function() {
         ${1}
@@ -44,27 +74,11 @@ snippet gis
     },
 snippet ism
     isMounted()
-snippet pt
-    propTypes: {
-        ${1}: React.PropTypes.${2:string}
-    },
-snippet rcc
-    import React from 'react/addons';
-
-    const ${1:ClassName} = React.createClass({
-      render() {
-        return (
-          ${0:<div />}
-        );
-      }
-    });
-
-    export default $1;
 snippet ren
-    render: function() {
-        return (
-            ${1:<div />}
-        );
+    render() {
+      return (
+        ${1:<div />}
+      );
     }
 snippet sst
     setState({
